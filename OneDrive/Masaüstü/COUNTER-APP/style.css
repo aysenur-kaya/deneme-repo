@@ -1,0 +1,154 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ body{
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      height: 100vh; /*tam ekran görünüm için yükseklik*/
+      /*sayfadaki ana kutuyu tam ortalamak için flex kullanıyoruz*/
+      display: flex;
+      justify-content: center; /*yatay ortalama*/
+      align-items: center; /*dikey ortalama*/
+    }
+
+    /*ana kutu container*/
+    .container{
+      width: 450px;
+      padding: 25px;
+      border-radius: 15px;
+       /* Şeffaf (glass effect) arka plan */
+      background: rgba(255, 255, 255, 0.15);
+      /* Hafif blur efekti → cam efekti */
+      backdrop-filter: blur(10px);
+      /* Kutuya hafif bir gölge veriyoruz */
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      /*yukarıdan aşağıya düzen*/
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+
+    /*başlık*/
+    .container h1{
+      color: black;
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+
+    /*BÜYÜK SAYI (counter)*/
+    #counter{
+      font-size: 60px; /*sayıyı büyük yapar*/
+      font-weight: bold; /*kalın yazı*/
+
+      color: black;
+      padding: 15px 0; /*yukarı ve aşağı boşluk*/
+
+      transition: 0.3s ease; /*geçiş efekti*/
+    }
+
+    /*BUTONLARIN BULUNDUĞU GENEL KUTU*/
+    .buttons{
+      display: flex; /*butonları yan yana dizer*/
+      justify-content: center;
+      gap: 15px;
+    }
+
+    /*BUTONALRIN GENEL TASARIMI*/
+    .buttons button{
+      padding: 12px 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgba(255,255,255, 0.25) ;
+      color: black;
+      backdrop-filter: blur(4px);    /* Hafif cam efekti */
+      transition: 0.25 ease;
+
+    }
+
+    .buttons button:hover{
+      background: rgba(255,255,255, 0.45);  
+      transform: scale(1.05);  /* Hover'da hafif büyüme */
+
+    }
+    .buttons button:active{
+      transform: scale(0.95); 
+    }
+
+    /*HEDEF BELİRLEME KUTUSU*/
+
+    #goal-box{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    /*input tasarımı*/
+    #goalInput{
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 15px;
+
+      background-color: rgba(255,255,255,0.3) ;
+      color: black;
+
+      outline: none;
+      text-align: center;
+
+       backdrop-filter: blur(4px);        /* Hafif blur efekti */
+
+    }
+    #goalInput:hover{
+       background: rgba(255,255,255,0.4);
+    }
+
+    /*SET GOAL BUTONU*/
+    #setGoal {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.35);
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.25s ease;
+
+    }
+
+    #setGoal:hover{
+      background: rgba(255,255,255,0.55);
+     transform: scale(1.05);
+    }
+    #setGoal:active{
+      transform: scale(0.9);
+    }
+
+    /*HEDEF YAZI*/
+    #goalText{
+      color: black;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+
+    /*SAYI AZALINCA UYGULANAN ANİMASYON*/
+    .decrease-anim{
+      color: #ff4e4e;       /* Kırmızı parlama */
+      transform: scale(0.9);  /* Hafif küçülme efekti */
+
+    }
+
+    /*RESET ANİMASYONU*/
+    .reset-anim{
+      color: #ffe14e;          /* Sarı parlama */
+     transform: scale(1.1);   /* Hafif büyüme */
+
+    }

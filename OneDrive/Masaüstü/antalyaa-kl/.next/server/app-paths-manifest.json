@@ -1,0 +1,6 @@
+{
+  "/page": "app/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/beyaz-esya-servisi/page": "app/beyaz-esya-servisi/page.js",
+  "/klima-servisi/page": "app/klima-servisi/page.js"
+}

@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark text-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-neon/30 text-white;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+
+  .glass-strong {
+    @apply border border-white/10 bg-dark-200/80 backdrop-blur-2xl;
+  }
+
+  .neon-text {
+    @apply text-neon;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5),
+      0 0 20px rgba(57, 255, 20, 0.3);
+  }
+
+  .neon-border {
+    @apply border border-neon/30;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.1),
+      inset 0 0 15px rgba(57, 255, 20, 0.05);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-white via-neon to-white bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .section-padding {
+    @apply px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
+  }
+
+  .container-custom {
+    @apply mx-auto max-w-7xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(57, 255, 20, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 255, 20, 0.5);
+}
